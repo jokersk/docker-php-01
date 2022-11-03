@@ -1,0 +1,13 @@
+{
+    "name": "jokersk/playground",
+    "authors": [
+        {
+            "name": "jokersk",
+            "email": "jokersk119@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": { "App\\": "app/" }
+    }
+}

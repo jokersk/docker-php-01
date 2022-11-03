@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/var/www/html
+    entrypoint: ["php", "-S", "0.0.0.0:8000"]
+  composer:
+    build: 
+      context: .
+      dockerfile: composer.dockerfile
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ["composer"]
+
+
